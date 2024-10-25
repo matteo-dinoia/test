@@ -7,7 +7,7 @@ on:
       - src/**
 jobs:
   TestPullRequest:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest rustup
 
     steps:
       - name: Checkout
@@ -17,6 +17,7 @@ jobs:
         id: updateToolchain
         run: |
           rustup toolchain uninstall stable && rustup toolchain install stable
+          rustup component add clippy
 
       - name: Toolchain info
         id: info

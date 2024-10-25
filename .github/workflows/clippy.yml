@@ -18,6 +18,7 @@ jobs:
         run: |
           rustup toolchain uninstall stable && rustup toolchain install stable
           rustup component add clippy
+          rustup component add rustfmt
 
       - name: Toolchain info
         id: info

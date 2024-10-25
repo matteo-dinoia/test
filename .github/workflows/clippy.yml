@@ -7,7 +7,7 @@ on:
       - src/**
 jobs:
   TestPullRequest:
-    runs-on: [ self-hosted, linux, rust ]
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout

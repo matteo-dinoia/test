@@ -1,0 +1,16 @@
+[package]
+name = "lessons"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# local library import, with local path
+libtest = { path = "../libtest" } # no need to include "libleaf"
+
+# library import from kellnr
+#kellnrtest = { version = "0.1.1", registry = "kellnr"}
+
+# web library import via `crates.io`
+rand = "0.8.4"
+
+

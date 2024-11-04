@@ -42,14 +42,6 @@ jobs:
           comment-body: "The code is not formatted correctly, run `cargo fmt --all`"
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Check Clippy
-        uses: actions-rs/clippy-check@v1
-        continue-on-error: true
-        id: checkClippy
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          args: --all-features
-
       - name: Run Cargo Tests
         run: |
           cargo test --all --no-fail-fast --color always

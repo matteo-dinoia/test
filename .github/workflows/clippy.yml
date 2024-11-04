@@ -1,4 +1,4 @@
-name: clippy-action
+name: Clippy
 on: [pull_request]
 
 jobs:

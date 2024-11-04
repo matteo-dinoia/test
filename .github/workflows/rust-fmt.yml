@@ -1,15 +1,15 @@
-on: pull_request
-
 name: Rustfmt
+on: [pull_request]
 
 jobs:
   format:
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
+
     steps:
       - uses: actions/checkout@v4
-      - uses: dtolnay/rust-toolchain@nightly
+      - uses: dtolnay/rust-toolchain@stable
         with:
           components: rustfmt
       - uses: mbrobbel/rustfmt-check@master

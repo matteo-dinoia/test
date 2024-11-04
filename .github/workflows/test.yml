@@ -1,0 +1,10 @@
+name: Test Pull Request
+on: [pull_request]
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: Kristories/cargo-test@v1.0.0

@@ -7,4 +7,5 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: Kristories/cargo-test@v1.0.0
+      - uses: dtolnay/rust-toolchain@stable
+      - run: cargo test --all --no-fail-fast --color always
